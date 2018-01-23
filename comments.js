@@ -20,8 +20,8 @@ export default function comments(state = [], action) {
             return state.comments.filter(comment => {
                     if (comment.id === action.id) {
                         comment.text = action.text;
-                        return comment;
                     }
+                return comment
             });
         case THUMB_UP_COMMENT:
             return state.map(comment => {
